@@ -1,9 +1,10 @@
-Try it out -> https://lustrous-cupcake-c98a8e.netlify.app/
+Try it out -> https://ultimatenetflix-ac077.web.app/
 
 Stunning Design and Seamless Functionality:                                                                                           
 🎥 Immerse yourself in a visually striking Netflix clone built with React, boasting an elegant and sleek design that rivals the original platform.                
 🖥️ Experience a user-friendly interface that ensures effortless navigation and an intuitive streaming experience.                                       
-📱 Enjoy seamless responsiveness across various devices, allowing you to enjoy your favorite movies and TV shows anytime, anywhere.                   
+📱 Enjoy seamless responsiveness across various devices, allowing you to enjoy your favorite movies and TV shows anytime, anywhere.         
+✅ Integration with Google Firebase for secure authentication and data storage.
 
 Advanced API Integration for Dynamic Content:                                                                                            
  🔗 Harness the power of multiple APIs seamlessly integrated into the clone, ensuring real-time updates and access to the latest releases and trending titles.      
