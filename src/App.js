@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import HomeScreen from "./screens/HomeScreen";
 import { Routes, Route } from "react-router-dom";
-import LoginScreen from "./screens/LoginScreen";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./userSlice";
 import ProfileScreen from "./screens/ProfileScreen";
+import WelcomeScreen from "./screens/WelcomeScreen";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
   const user = useSelector(selectUser);
@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       {!user ? (
-        <LoginScreen />
+        <WelcomeScreen />
       ) : (
         <Routes>
           <Route path="/" element={<HomeScreen />} />

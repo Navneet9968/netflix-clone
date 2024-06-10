@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./SignupScreen.css";
 import { auth } from "../firebase";
 
 function SignupScreen() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+
+  const [isSignIn, setIsSignIn] = useState(true);
 
   const register = (e) => {
     e.preventDefault();
@@ -35,21 +37,35 @@ function SignupScreen() {
         alert(error.message);
       });
   };
+
   return (
     <div className="signupScreen">
       <form action="">
-        <h1>Sign In</h1>
+        <h1>{isSignIn ? <>Sign In</> : <>Sign Up</>}</h1>
         <input ref={emailRef} type="email" placeholder="Email"></input>
         <input ref={passwordRef} type="password" placeholder="Password"></input>
-        <button type="submit" onClick={signIn}>
-          Sign In
-        </button>
+        {isSignIn ? (
+          <button type="submit" onClick={signIn}>
+            Sign In
+          </button>
+        ) : (
+          <button type="submit" onClick={register}>
+            Sign Up
+          </button>
+        )}
 
         <h4>
-          <span className="signupScreen__gray">New to Netflix?</span>
-          <span className="signupScreen__link" onClick={register}>
-            Sign up now.
-          </span>
+          {isSignIn ? (
+            <>
+              <span className="signupScreen__gray">New to Netflix ? </span>
+              <span
+                className="signupScreen__link"
+                onClick={() => setIsSignIn(false)}
+              >
+                Sign up now.
+              </span>
+            </>
+          ) : null}
         </h4>
       </form>
     </div>

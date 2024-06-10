@@ -1,0 +1,97 @@
+
+.welcomeScreen{
+  position:relative; 
+   height: 100%;
+   background: url("https://cdn.wallpapersafari.com/24/74/zgeTuV.jpg") center no-repeat;
+  background-size: cover;
+}
+.welcomeScreen__gradient{
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  background:rgba(0,0,0,0.4);
+  background-image: linear-gradient(
+      to top,
+      rgba(0,0,0,0.8) 0,
+      rgba(0,0,0,0) 60%,
+      rgba(0,0,0,0.8) 100%
+  );
+}
+
+.welcomeScreen__button{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  z-index: 1;
+  cursor: pointer;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.2s;
+}
+.welcomeScreen__logo{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  object-fit: contain;
+  padding-left: 20px;
+}
+
+.welcomeScreen__body{
+  position: absolute;
+  top: 30%;
+  /* left: 50%;
+  transform: translate(-50%,0%); */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  padding:20px;
+  left: 0;
+  right: 0;
+}
+.welcomeScreen__body>h1{
+  font-size: 3.125rem;
+  margin-bottom: 20px;
+}
+.welcomeScreen__body>h2{
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.welcomeScreen__body>h3{
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.welcomeScreen__input{
+  margin: 20px;
+}
+
+.welcomeScreen__input>form>input{
+  /* line-height: 1.5rem; */
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  max-width: 600px;
+  border-radius: 0.3em;
+  border: none;
+}
+
+.welcomeScreen__getStarted{
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #FFF;
+  background-color: #E50914;
+  border-radius: 0.3em;
+  border: none;
+  cursor: pointer;
+}
+
